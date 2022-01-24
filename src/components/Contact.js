@@ -7,7 +7,6 @@ import { Link , useNavigate } from 'react-router-dom'
 import liff from '@line/liff';
 // import "react-datepicker/dist/react-datepicker.css";
 
-
 const Contact = () => {
   // const [name, setName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
