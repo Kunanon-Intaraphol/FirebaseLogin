@@ -1,6 +1,6 @@
 {
   "name": "react-boiler",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@line/liff": "^2.18.1",
