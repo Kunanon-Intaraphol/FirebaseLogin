@@ -18,7 +18,7 @@ const Contact = () => {
   const [displayName, setDisplayName] = useState("");
   const [idToken, setIdToken] = useState("");
   const [pictureUrl, setPictureUrl] = useState("");
-
+  const idUser = ""
   const initLine = () => {
     liff.init({ liffId: '1656553430-MzgGexx9' }, () => {
       if (liff.isLoggedIn()) {
@@ -35,6 +35,7 @@ const Contact = () => {
       console.log(profile);
       setDisplayName(profile.displayName);
       setUserId(profile.userId);
+      idUser = profile.userIdl;
       setPictureUrl(profile.pictureUrl);
     }).catch(err => console.error(err));
   }
@@ -51,7 +52,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-    db.collection("contacts")
+    db.collection("contacts").doc(""+idUser+"")
       .add({
         // name: name,
         startDate: startDate,
