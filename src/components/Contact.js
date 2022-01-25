@@ -18,7 +18,7 @@ const Contact = () => {
   const [displayName, setDisplayName] = useState("");
   const [idToken, setIdToken] = useState("");
   const [pictureUrl, setPictureUrl] = useState("");
-  
+
   const initLine = () => {
     liff.init({ liffId: '1656553430-MzgGexx9' }, () => {
       if (liff.isLoggedIn()) {
@@ -51,7 +51,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-    db.collection("contacts").doc("ljkfdasjk")
+    db.collection("contacts")
       .add({
         // name: name,
         startDate: startDate,
