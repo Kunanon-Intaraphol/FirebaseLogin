@@ -49,7 +49,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-    db.collection("contacts").doc(setUserId)
+    db.collection("contacts")
+      .doc(userId)
       .add({
         // name: name,
         startDate: startDate,
