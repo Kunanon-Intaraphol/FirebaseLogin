@@ -52,7 +52,6 @@ const Contact = () => {
     e.preventDefault();
     setLoader(true);
     db.collection("contacts")
-      .doc({UserId})
       .add({
         // name: name,
         startDate: startDate,
