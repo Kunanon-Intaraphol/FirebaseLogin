@@ -46,8 +46,6 @@ const Contact = () => {
 
   const [loader, setLoader] = useState(false);
 
-  const UserId = userId
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
