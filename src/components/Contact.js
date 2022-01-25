@@ -6,6 +6,7 @@ import AI from "./AI"
 import { Link , useNavigate } from 'react-router-dom'
 import liff from '@line/liff';
 // import "react-datepicker/dist/react-datepicker.css";
+
 const Contact = () => {
   // const [name, setName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
@@ -48,7 +49,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-    db.collection("contacts")
+    db.collection("contacts").doc(profile.userId)
       .add({
         // name: name,
         startDate: startDate,
