@@ -49,7 +49,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-    db.collection("contacts").doc(userId)
+    db.collection("contacts").doc(setUserId)
       .add({
         // name: name,
         startDate: startDate,
