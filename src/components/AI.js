@@ -58,9 +58,9 @@ const Frame = ({title , text , AI ,Status}) => {
         
             <center>
                 <div className="div">
-    <p>มีความเสี่ยงที่ขะเป็นข่าวปลอม : {AI}%</p>
-    <p>หัวข้อข่าว :  {title}</p>       
-    <p>เนื้อหาข่าว :  {text}</p>       
+    <p>มีความเสี่ยงที่ขะเป็นข่าวปลอม : {AI}%{"\n"}</p>
+    <p>หัวข้อข่าว :  {title}{"\n"}</p>       
+    <p>เนื้อหาข่าว :  {text}{"\n"}</p>       
                 </div>
             </center>
         );
