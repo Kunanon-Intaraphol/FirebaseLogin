@@ -94,7 +94,7 @@ const Contact = () => {
     <form className="form" onSubmit={handleSubmit}>
     
       <h1>ตรวจสอบข่าวปลอม</h1>
-      <h2>สวัสดีคุณ{displayName}</h2>
+      <h2>สวัสดีคุณ : </h2><h2>{displayName}</h2>
         <h2>ระบุข่าว</h2>
 
       {/* <label></label>

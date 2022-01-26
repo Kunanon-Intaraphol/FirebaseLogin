@@ -16,7 +16,7 @@ const Read = () => {
   
     // Fetch the required data using the get() method
     const Fetchdata = ()=>{
-        db.collection("contacts").doc(userId).get().then((querySnapshot) => {
+        db.collection("contacts").get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -49,10 +49,8 @@ const Read = () => {
 }
   
 // Define how each display entry will be structured
-
 const Frame = ({title , text , AI ,Status}) => {
     console.log(title + " " + text + " " + AI);
-    db.collection(userId).doc(Uid).get
     if(Status == "read"){
         
         console.log("inif")
