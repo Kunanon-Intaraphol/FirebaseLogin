@@ -2,39 +2,37 @@
 import {db} from "../firebase";
 import React, { useState } from 'react';
 import './read.css';
-import liff from '@line/liff';
+// import liff from '@line/liff';
 
 const Read = () => {
   
-    const [userId, setUserId] = useState("");
-    const [displayName, setDisplayName] = useState("");
-    const [idToken, setIdToken] = useState("");
-    const [pictureUrl, setPictureUrl] = useState("");
+    // const [userId, setUserId] = useState("");
+    // const [displayName, setDisplayName] = useState("");
+    // const [idToken, setIdToken] = useState("");
+    // const [pictureUrl, setPictureUrl] = useState("");
   
-    const initLine = () => {
-      liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
-        if (liff.isLoggedIn()) {
-          runApp();
-        } else {
-          liff.login();
-        }
-      }, err => console.error(err));
-      }
-    const runApp = () => {
-      const idToken = liff.getIDToken();
-      setIdToken(idToken);
-      liff.getProfile().then(profile => {
-        console.log(profile);
-        setDisplayName(profile.displayName);
-        setUserId(profile.userId);
-        setPictureUrl(profile.pictureUrl);
-      }).catch(err => console.error(err));
-    }
-    useEffect(() => {
-      initLine();
-    }, []);
-
-    const [info , setInfo] = useState([]);
+    // const initLine = () => {
+    //   liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
+    //     if (liff.isLoggedIn()) {
+    //       runApp();
+    //     } else {
+    //       liff.login();
+    //     }
+    //   }, err => console.error(err));
+    //   }
+    // const runApp = () => {
+    //   const idToken = liff.getIDToken();
+    //   setIdToken(idToken);
+    //   liff.getProfile().then(profile => {
+    //     console.log(profile);
+    //     setDisplayName(profile.displayName);
+    //     setUserId(profile.userId);
+    //     setPictureUrl(profile.pictureUrl);
+    //   }).catch(err => console.error(err));
+    // }
+    // useEffect(() => {
+    //   initLine();
+    // }, []);
   
     // Start the fetch operation as soon as
     // the page loads
@@ -47,7 +45,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().then((querySnapshot) => {
+        db.collection("contacts").doc().get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -76,11 +74,17 @@ const Read = () => {
         }
         </div>
   
-    );
+    )
+    
+    
 }
   
 // Define how each display entry will be structured
 const Frame = ({title , text , AI ,Status}) => {
+
+
+    // const Picid = pictureUrl
+    // const Nameid = displayName
 
     console.log(title + " " + text + " " + AI);
     if(Status == "read"){
@@ -90,6 +94,7 @@ const Frame = ({title , text , AI ,Status}) => {
         
             <center>
                 <div className="div">
+ 
     <p>
     <h4>มีความเสี่ยงที่จะเป็นข่าวปลอม : {AI}%{"\n"}</h4>
     <h4>หัวข้อข่าว </h4>{"\n"}   {title}{"\n"}       
