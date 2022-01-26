@@ -119,10 +119,10 @@ const Contact = () => {
         required
         style={{ 
         padding: "20px",
-        width: "auto",
+        width: "300px",
         height: "60px",
-        marginLeft: "30px",
-        marginRight: "30pxh",
+        marginLeft: "auto",
+        marginRight: "auto",
         marginTop: "30px",
         }} 
       />
@@ -135,10 +135,10 @@ const Contact = () => {
         required
         style={{ 
           padding: "20px",
-          width: "auto",
+          width: "300px",
           height: "150px",
-          marginLeft: "30px",
-          marginRight: "30px",
+          marginLeft: "auto",
+          marginRight: "auto",
           }} 
         
       ></textarea>
