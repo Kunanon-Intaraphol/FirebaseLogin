@@ -45,9 +45,7 @@ const Read = () => {
     // Fetch the required data using the get() method
     const Fetchdata = ()=>{
         const Uid = userId
-        const Picid = pictureUrl
-        const Nameid = displayName
-        const Tokenid = idToken
+
         db.collection("contacts").doc(Uid).get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
@@ -82,6 +80,8 @@ const Read = () => {
   
 // Define how each display entry will be structured
 const Frame = ({title , text , AI ,Status}) => {
+    const Picid = pictureUrl
+    const Nameid = displayName
     console.log(title + " " + text + " " + AI);
     if(Status == "read"){
         
