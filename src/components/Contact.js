@@ -94,7 +94,7 @@ const Contact = () => {
     <form className="form" onSubmit={handleSubmit}>
     
       <h1>ตรวจสอบข่าวปลอม</h1>
-      <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10}}/>
+      <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10,alignItems: 'center',justifyContent: 'center'}}/>
       <h2>สวัสดีคุณ : {displayName}</h2>
         <h2>โปรดระบุข่าว</h2>
 
