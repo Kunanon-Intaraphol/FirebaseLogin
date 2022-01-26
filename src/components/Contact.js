@@ -121,6 +121,7 @@ const Contact = () => {
         height: "60px",
         marginLeft: "auto",
         marginRight: "auto",
+        marginTop: "30px",
         }} 
       />
 
