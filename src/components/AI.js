@@ -33,6 +33,8 @@ const Read = () => {
     // useEffect(() => {
     //   initLine();
     // }, []);
+
+    const [info , setInfo] = useState([]);
   
     // Start the fetch operation as soon as
     // the page loads
@@ -45,7 +47,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").doc().get().then((querySnapshot) => {
+        db.collection("contacts").get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -74,17 +76,11 @@ const Read = () => {
         }
         </div>
   
-    )
-    
-    
+    );
 }
   
 // Define how each display entry will be structured
 const Frame = ({title , text , AI ,Status}) => {
-
-
-    // const Picid = pictureUrl
-    // const Nameid = displayName
 
     console.log(title + " " + text + " " + AI);
     if(Status == "read"){
@@ -94,12 +90,13 @@ const Frame = ({title , text , AI ,Status}) => {
         
             <center>
                 <div className="div">
- 
+
     <p>
     <h4>มีความเสี่ยงที่จะเป็นข่าวปลอม : {AI}%{"\n"}</h4>
     <h4>หัวข้อข่าว </h4>{"\n"}   {title}{"\n"}       
     <h4>เนื้อหาข่าว</h4>{"\n"}  {text}{"\n"}
     </p>       
+    
                 </div>
             </center>
         );
