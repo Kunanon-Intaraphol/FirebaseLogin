@@ -92,11 +92,12 @@ const Contact = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-    
+      <center>
       <h1>ตรวจสอบข่าวปลอม</h1>
-      <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10,position: 'absolute'}}/>
-      <h2>สวัสดีคุณ : {displayName}</h2>
+        <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10}}/>
+        <h2>สวัสดีคุณ : {displayName}</h2>
         <h2>โปรดระบุข่าว</h2>
+      </center>
 
       {/* <label></label>
       <input
