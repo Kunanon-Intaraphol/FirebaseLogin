@@ -45,7 +45,7 @@ const Read = () => {
   
     // Fetch the required data using the get() method
     const Fetchdata = ()=>{
-        const Uid = userId
+        // const Uid = userId
 
         db.collection("contacts").get().then((querySnapshot) => {
             console.log("incollection")
@@ -82,9 +82,6 @@ const Read = () => {
 // Define how each display entry will be structured
 const Frame = ({title , text , AI ,Status}) => {
 
-    const Picid = pictureUrl
-    const Nameid = displayName
-    
     console.log(title + " " + text + " " + AI);
     if(Status == "read"){
         
@@ -93,8 +90,6 @@ const Frame = ({title , text , AI ,Status}) => {
         
             <center>
                 <div className="div">
-    <img src = {Picid} style={{width:200, height:200 ,borderRadius:10}}/>
-    <h4>คุณ : {Nameid}</h4>
     <p>
     <h4>มีความเสี่ยงที่จะเป็นข่าวปลอม : {AI}%{"\n"}</h4>
     <h4>หัวข้อข่าว </h4>{"\n"}   {title}{"\n"}       
