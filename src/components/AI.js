@@ -12,7 +12,7 @@ const Read = () => {
     const [pictureUrl, setPictureUrl] = useState("");
   
     const initLine = () => {
-      liff.init({ liffId: '1656553430-MzgGexx9' }, () => {
+      liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
         if (liff.isLoggedIn()) {
           runApp();
         } else {
@@ -81,8 +81,10 @@ const Read = () => {
   
 // Define how each display entry will be structured
 const Frame = ({title , text , AI ,Status}) => {
+
     const Picid = pictureUrl
     const Nameid = displayName
+    
     console.log(title + " " + text + " " + AI);
     if(Status == "read"){
         
