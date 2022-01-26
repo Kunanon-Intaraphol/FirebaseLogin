@@ -41,6 +41,8 @@ const Contact = () => {
   useEffect(() => {
     initLine();
   }, []);
+
+
   
   let navigate = useNavigate();
 
@@ -49,8 +51,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-    db.collection("contacts")
-      .add({
+    db.collection("contacts").doc("sfdsfsdf")
+      .set({
         // name: name,
         startDate: startDate,
         title: title,
