@@ -52,14 +52,13 @@ button {
 textarea {
   padding: 20px;
   border-radius: 10px;
-  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137); */
-  margin-bottom: 20px;
   border: 3px solid  #3F89F3;
-  /* border: none; */
   background: #fff;
   font-size: 16px;
   color: #3F89F3;
-  outline: none;
+  width: auto;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .form > input:focus,
