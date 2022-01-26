@@ -67,7 +67,8 @@ const Contact = () => {
 
       })
       .then(() => {
-        navigate("./AI")
+        navigate("./AI");
+
         setLoader(false);
         alert("Your message has been submitted👍");
       })
@@ -93,6 +94,7 @@ const Contact = () => {
     <form className="form" onSubmit={handleSubmit}>
     
       <h1>ตรวจสอบข่าวปลอม</h1>
+      <he>สวัสดีคุณ{displayName}</he>
         <h2>ระบุข่าว</h2>
 
       {/* <label></label>
