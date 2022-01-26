@@ -5,6 +5,35 @@ import './read.css';
   
 const Read = () => {
   
+    const [AI, setAI] = useState("");
+    const [userId, setUserId] = useState("");
+    const [displayName, setDisplayName] = useState("");
+    const [idToken, setIdToken] = useState("");
+    const [pictureUrl, setPictureUrl] = useState("");
+  
+    const initLine = () => {
+      liff.init({ liffId: '1656553430-MzgGexx9' }, () => {
+        if (liff.isLoggedIn()) {
+          runApp();
+        } else {
+          liff.login();
+        }
+      }, err => console.error(err));
+      }
+    const runApp = () => {
+      const idToken = liff.getIDToken();
+      setIdToken(idToken);
+      liff.getProfile().then(profile => {
+        console.log(profile);
+        setDisplayName(profile.displayName);
+        setUserId(profile.userId);
+        setPictureUrl(profile.pictureUrl);
+      }).catch(err => console.error(err));
+    }
+    useEffect(() => {
+      initLine();
+    }, []);
+
     const [info , setInfo] = useState([]);
   
     // Start the fetch operation as soon as
@@ -16,7 +45,8 @@ const Read = () => {
   
     // Fetch the required data using the get() method
     const Fetchdata = ()=>{
-        db.collection("contacts").get().then((querySnapshot) => {
+        const Uid = userId
+        db.collection("contacts").doc(Uid).get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -58,7 +88,8 @@ const Frame = ({title , text , AI ,Status}) => {
         
             <center>
                 <div className="div">
-    
+    <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10}}/>
+    <h4>คุณ : {displayName}</h4>
     <p>
     <h4>มีความเสี่ยงที่จะเป็นข่าวปลอม : {AI}%{"\n"}</h4>
     <h4>หัวข้อข่าว :</h4>  {title}{"\n"}       
