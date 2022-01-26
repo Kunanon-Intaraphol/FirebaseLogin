@@ -5,7 +5,6 @@ import './read.css';
   
 const Read = () => {
   
-    const [AI, setAI] = useState("");
     const [userId, setUserId] = useState("");
     const [displayName, setDisplayName] = useState("");
     const [idToken, setIdToken] = useState("");
@@ -46,6 +45,9 @@ const Read = () => {
     // Fetch the required data using the get() method
     const Fetchdata = ()=>{
         const Uid = userId
+        const Picid = pictureUrl
+        const Nameid = displayName
+        const Tokenid = idToken
         db.collection("contacts").doc(Uid).get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
@@ -88,8 +90,8 @@ const Frame = ({title , text , AI ,Status}) => {
         
             <center>
                 <div className="div">
-    <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10}}/>
-    <h4>คุณ : {displayName}</h4>
+    <img src = {Picid} style={{width:200, height:200 ,borderRadius:10}}/>
+    <h4>คุณ : {Nameid}</h4>
     <p>
     <h4>มีความเสี่ยงที่จะเป็นข่าวปลอม : {AI}%{"\n"}</h4>
     <h4>หัวข้อข่าว :</h4>  {title}{"\n"}       
