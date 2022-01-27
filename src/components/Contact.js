@@ -51,8 +51,6 @@ const Contact = () => {
     setLoader(true);
 
     const Uid = userId
-    const Nid = displayName
-    const Purl = pictureUrl
 
     db.collection("contacts").doc(Uid)
       .set({
@@ -88,12 +86,7 @@ const Contact = () => {
     setDisplayName("");
     setIdToken("");
     setPictureUrl("");
-
-    <Link to={{
-      pathname: './AI',
-      state: [{id: Uid, name: Nid, picture: Purl}]
-    }}>
-    </Link>
+    
   };
 
   return (
