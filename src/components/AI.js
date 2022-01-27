@@ -2,7 +2,7 @@
 import {db} from "../firebase";
 import React, { useState } from 'react';
 import './read.css';
-// import liff from '@line/liff';
+import liff from '@line/liff';
 
 const Read = () => {
   
