@@ -6,33 +6,33 @@ import './read.css';
 
 const Read = () => {
   
-    // const [userId, setUserId] = useState("");
-    // const [displayName, setDisplayName] = useState("");
-    // const [idToken, setIdToken] = useState("");
-    // const [pictureUrl, setPictureUrl] = useState("");
+    const [userId, setUserId] = useState("");
+    const [displayName, setDisplayName] = useState("");
+    const [idToken, setIdToken] = useState("");
+    const [pictureUrl, setPictureUrl] = useState("");
   
-    // const initLine = () => {
-    //   liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
-    //     if (liff.isLoggedIn()) {
-    //       runApp();
-    //     } else {
-    //       liff.login();
-    //     }
-    //   }, err => console.error(err));
-    //   }
-    // const runApp = () => {
-    //   const idToken = liff.getIDToken();
-    //   setIdToken(idToken);
-    //   liff.getProfile().then(profile => {
-    //     console.log(profile);
-    //     setDisplayName(profile.displayName);
-    //     setUserId(profile.userId);
-    //     setPictureUrl(profile.pictureUrl);
-    //   }).catch(err => console.error(err));
-    // }
-    // useEffect(() => {
-    //   initLine();
-    // }, []);
+    const initLine = () => {
+      liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
+        if (liff.isLoggedIn()) {
+          runApp();
+        } else {
+          liff.login();
+        }
+      }, err => console.error(err));
+      }
+    const runApp = () => {
+      const idToken = liff.getIDToken();
+      setIdToken(idToken);
+      liff.getProfile().then(profile => {
+        console.log(profile);
+        setDisplayName(profile.displayName);
+        setUserId(profile.userId);
+        setPictureUrl(profile.pictureUrl);
+      }).catch(err => console.error(err));
+    }
+    useEffect(() => {
+      initLine();
+    }, []);
 
     const [info , setInfo] = useState([]);
   
@@ -47,7 +47,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().then((querySnapshot) => {
+        db.collection("contacts").doc(userId).get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -65,6 +65,8 @@ const Read = () => {
         <div>
             <center>
             <h3>NewsProof</h3> 
+            <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10,marginTop:20,marginBottom:20}}/>
+            <h2>สวัสดีคุณ : {displayName}</h2>
             </center>
         {
             info.map((contacts) => (
