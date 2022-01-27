@@ -2,37 +2,37 @@
 import {db} from "../firebase";
 import React, { useState } from 'react';
 import './read.css';
-import liff from '@line/liff';
+// import liff from '@line/liff';
 
 const Read = () => {
   
-    const [userId, setUserId] = useState("");
-    const [displayName, setDisplayName] = useState("");
-    const [idToken, setIdToken] = useState("");
-    const [pictureUrl, setPictureUrl] = useState("");
+    // const [userId, setUserId] = useState("");
+    // const [displayName, setDisplayName] = useState("");
+    // const [idToken, setIdToken] = useState("");
+    // const [pictureUrl, setPictureUrl] = useState("");
   
-    const initLine = () => {
-      liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
-        if (liff.isLoggedIn()) {
-          runApp();
-        } else {
-          liff.login();
-        }
-      }, err => console.error(err));
-      }
-    const runApp = () => {
-      const idToken = liff.getIDToken();
-      setIdToken(idToken);
-      liff.getProfile().then(profile => {
-        console.log(profile);
-        setDisplayName(profile.displayName);
-        setUserId(profile.userId);
-        setPictureUrl(profile.pictureUrl);
-      }).catch(err => console.error(err));
-    }
-    useEffect(() => {
-      initLine();
-    }, []);
+    // const initLine = () => {
+    //   liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
+    //     if (liff.isLoggedIn()) {
+    //       runApp();
+    //     } else {
+    //       liff.login();
+    //     }
+    //   }, err => console.error(err));
+    //   }
+    // const runApp = () => {
+    //   const idToken = liff.getIDToken();
+    //   setIdToken(idToken);
+    //   liff.getProfile().then(profile => {
+    //     console.log(profile);
+    //     setDisplayName(profile.displayName);
+    //     setUserId(profile.userId);
+    //     setPictureUrl(profile.pictureUrl);
+    //   }).catch(err => console.error(err));
+    // }
+    // useEffect(() => {
+    //   initLine();
+    // }, []);
     
 
     const [info , setInfo] = useState([]);
@@ -66,10 +66,10 @@ const Read = () => {
         <div>
             <center>
             <h3>NewsProof</h3> 
-            <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10,marginTop:20,marginBottom:20}}/>
-            <h2>สวัสดีคุณ : {displayName}</h2>
+            {/* <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10,marginTop:20,marginBottom:20}}/>
+            <h2>สวัสดีคุณ : {displayName}</h2>/
             <h2>{userId}</h2>
-            <h2>{idToken}</h2>
+            <h2>{idToken}</h2> */}
             
             </center>
         {
