@@ -51,6 +51,8 @@ const Contact = () => {
     setLoader(true);
 
     const Uid = userId
+    const Nid = displayName
+    const Purl = pictureUrl
 
     db.collection("contacts").doc(Uid)
       .set({
@@ -77,7 +79,6 @@ const Contact = () => {
         setLoader(false);
       });
 
-    // setName("");
     setStartDate("");
     settitle("");
     setMessage("");
@@ -87,7 +88,12 @@ const Contact = () => {
     setDisplayName("");
     setIdToken("");
     setPictureUrl("");
-    
+
+    <Link to={{
+      pathname: './AI',
+      state: [{id: Uid, name: Nid, picture: Purl}]
+    }}>
+    </Link>
   };
 
   return (
@@ -98,17 +104,7 @@ const Contact = () => {
         <h2>สวัสดีคุณ : {displayName}</h2>
         <h2>โปรดระบุข่าว</h2>
       </center>
-
-      {/* <label></label>
-      <input
-        placeholder="ชื่อ"
-        style={{ color: " #3F89F3" }}
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      /> */}
     
-
       <label></label>
       <input
         placeholder="หัวข้อข่าว"
@@ -143,21 +139,6 @@ const Contact = () => {
         
       ></textarea>
 
-    
-      {/* <DatePicker
-        // selected={startDate}
-        // onSelect={startDate}
-        // onChange={(date) => setStartDate(date)}
-        // required
-      /> */}
-
-      {/* <Link to="/AI" 
-        type="submit"
-        style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>  */}
       <button
         type="submit"
         style={{ background: loader ? "#ccc" : " #3F89F3", 
@@ -173,7 +154,7 @@ const Contact = () => {
       >
         ส่ง
       </button>
-      {/* </Link> */}
+     
     </form>
   );
 };
