@@ -113,18 +113,11 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
         
     }
     else{
-        function refreshPage() {
-            window.location.reload(false);
-          }
+       
         return(
         
             <center>
-
-    <div>
-      <button onClick={refreshPage}>Click to reload!</button>
-    </div>
-    
-                {/* <div className="div">
+                <div className="div">
     <p style={{fontSize: '20px'}}>โปรดรอสักครู ...ระบบกำลังประมวลผล... กรุณากดปุ่มเพื่อรับคำตอบ</p>     
 
     <button style={{ 
@@ -140,7 +133,7 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
         >
         กดเพื่อรับผลคำตอบ
     </button>
-                </div> */}
+                </div>
             </center>
         );
     }
