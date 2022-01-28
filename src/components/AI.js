@@ -76,7 +76,8 @@ const Read = () => {
             info.map((contacts) => (
             <Frame title={contacts.title} 
                    text={contacts.text} 
-                   AI={contacts.AI}
+                   FAI={contacts.FAI}
+                   TAI={contacts.TAI}
                    Status={contacts.status}/>
             ))
         }
@@ -85,9 +86,9 @@ const Read = () => {
     );
 }
 
-const Frame = ({title , text , AI ,Status}) => {
+const Frame = ({title , text , FAI ,Status ,TAI}) => {
 
-    console.log(title + " " + text + " " + AI);
+    console.log(title + " " + text + " " + FAI + " " + TAI);
     if(Status == "read"){
         
         console.log("inif")
@@ -97,7 +98,8 @@ const Frame = ({title , text , AI ,Status}) => {
                 <div className="div">
 
     <p>
-    <h4>มีความเสี่ยงที่จะเป็นข่าวปลอม : {AI}%{"\n"}</h4>
+    <h4>มีความเสี่ยงที่จะเป็นข่าวปลอม : {FAI}%{"\n"}</h4>
+    <h4>มีความคล้ายที่จะเป็นข่าวจริง : {TAI}%{"\n"}</h4>
     <h4>หัวข้อข่าว </h4>{"\n"}   {title}{"\n"}       
     <h4>เนื้อหาข่าว</h4>{"\n"}  {text}{"\n"}
     </p>       
