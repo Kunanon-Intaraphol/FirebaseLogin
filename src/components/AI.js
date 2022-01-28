@@ -7,7 +7,6 @@ import './read.css';
 const Read = () => {
 
     window.location.reload(false);
-        time.sleep(1)
     
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
