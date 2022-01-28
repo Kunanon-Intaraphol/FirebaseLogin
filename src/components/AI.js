@@ -6,9 +6,10 @@ import './read.css';
 
 const Read = () => {
     
-    window.location.reload(false);
-    await sleep(1000)
-    
+    setTimeout(function() {
+        location.reload();
+      }, 3000);
+
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
     // const [idToken, setIdToken] = useState("");
