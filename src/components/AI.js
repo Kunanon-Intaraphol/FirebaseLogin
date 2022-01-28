@@ -5,6 +5,8 @@ import './read.css';
 // import liff from '@line/liff';
 
 const Read = () => {
+
+    window.location.reload(true);
   
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
