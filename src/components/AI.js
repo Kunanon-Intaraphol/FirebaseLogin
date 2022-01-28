@@ -7,7 +7,7 @@ import './read.css';
 const Read = () => {
     
     setTimeout(function() {
-        location.reload(true);
+        window.location.reload(true);
     }, 3000)
 
     // const [userId, setUserId] = useState("");
