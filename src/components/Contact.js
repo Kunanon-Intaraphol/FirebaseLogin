@@ -13,7 +13,8 @@ const Contact = () => {
   const [title, settitle] = useState("");
   const [text, setMessage] = useState("");
   const [status, setstatus] = useState("unread");
-  const [AI, setAI] = useState("");
+  const [FAI, setFAI] = useState("");
+  const [TAI, setTAI] = useState("");
   const [userId, setUserId] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [idToken, setIdToken] = useState("");
@@ -59,7 +60,8 @@ const Contact = () => {
         title: title,
         text: text,
         status:status,
-        AI:AI,
+        FAI:FAI,
+        TAI:TAI,
         userId:userId,
         displayName:displayName,
         idToken:idToken,
@@ -81,7 +83,8 @@ const Contact = () => {
     settitle("");
     setMessage("");
     setstatus("");
-    setAI("");
+    setFAI("");
+    setTAI("");
     setUserId("");
     setDisplayName("");
     setIdToken("");
