@@ -5,10 +5,15 @@ import './read.css';
 // import liff from '@line/liff';
 
 const Read = () => {
-    
+
+    class app extends React.Component {
+    componentDidMount() {
     setTimeout(function() {
         window.location.reload(false);
     }, 2000)
+    }
+    }
+    
 
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
