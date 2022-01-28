@@ -6,14 +6,11 @@ import './read.css';
 
 const Read = () => {
 
-    class app extends React.Component {
-    componentDidMount() {
+    componentDidMount();{
     setTimeout(function() {
         window.location.reload(false);
     }, 2000)
     }
-    }
-    
 
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
