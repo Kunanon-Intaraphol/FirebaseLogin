@@ -6,7 +6,8 @@ import './read.css';
 
 const Read = () => {
     
-    
+    window.location.reload(false);
+    await sleep(1000)
     
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
@@ -120,7 +121,7 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
                 <div className="div">
     <p style={{fontSize: '20px'}}>โปรดรอสักครู ...ระบบกำลังประมวลผล... กรุณากดปุ่มเพื่อรับคำตอบ</p>     
 
-    <button style={{ 
+    <button style={{    
         width: "250px",
         height: "60px",
         marginTop:'30px',
