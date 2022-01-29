@@ -5,11 +5,8 @@ import './read.css';
 // import liff from '@line/liff';
 
 const Read = () => {
-
-    setTimeout(function() {
-        window.location.reload(true);
-    }, 5000)
     
+
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
     // const [idToken, setIdToken] = useState("");
@@ -92,9 +89,16 @@ const Read = () => {
 
 const Frame = ({title , text , FAI ,Status ,TAI}) => {
 
+    var i = true
+
     console.log(title + " " + text + " " + FAI + " " + TAI);
     if(Status == "read"){
-        
+        if(i == true){
+            setTimeout(function() {
+                window.location.reload(false);
+            }, 5000)
+            i == false
+        }
         console.log("inif")
         return(
         
