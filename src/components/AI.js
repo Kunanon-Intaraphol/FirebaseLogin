@@ -89,13 +89,13 @@ const Read = () => {
 
 const Frame = ({title , text , FAI ,Status ,TAI}) => {
 
-    var i = true
+    const i = true
 
     console.log(title + " " + text + " " + FAI + " " + TAI);
     if(Status == "read"){
         if(i == true){
             setTimeout(function() {
-                window.location.reload();
+                window.location.reload(false);
             }, 5000)
             i == false
         }
