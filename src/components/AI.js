@@ -10,12 +10,14 @@ const Read = () => {
     //     window.location.reload(false);
     // }, 2000)
 
-    window.onload = function() {
-        if(!window.location.hash) {
-            window.location = window.location + '#loaded';
-            window.location.reload();
-        }
-    }
+    // window.onload = function() {
+    //     if(!window.location.hash) {
+    //         window.location = window.location + '#loaded';
+    //         window.location.reload();
+    //     }
+    // }
+    
+    window.location.reload();
 
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
