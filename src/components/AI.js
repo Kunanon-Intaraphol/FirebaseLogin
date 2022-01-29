@@ -6,7 +6,15 @@ import './read.css';
 
 const Read = () => {
     
+    const i = true
 
+    if(i == true){
+        setTimeout(function() {
+            window.location.reload(false);
+        }, 5000)
+        i == false
+    }
+    
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
     // const [idToken, setIdToken] = useState("");
@@ -111,9 +119,7 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
         
     }
     else{
-        setTimeout(function() {
-            window.location.reload(false);
-        }, 2000)
+
         return(
         
             <center>
