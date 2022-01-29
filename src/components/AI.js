@@ -95,7 +95,7 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
     if(Status == "read"){
         if(i == true){
             setTimeout(function() {
-                window.location.reload(false);
+                window.location.reload();
             }, 5000)
             i == false
         }
