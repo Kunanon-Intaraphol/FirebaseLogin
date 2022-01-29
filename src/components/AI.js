@@ -6,19 +6,10 @@ import './read.css';
 
 const Read = () => {
 
-    // setTimeout(function() {
-    //     window.location.reload(false);
-    // }, 2000)
-
-    // window.onload = function() {
-    //     if(!window.location.hash) {
-    //         window.location = window.location + '#loaded';
-    //         window.location.reload();
-    //     }
-    // }
+    setTimeout(function() {
+        window.location.reload(false);
+    }, 5000)
     
-    window.location.reload();
-
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
     // const [idToken, setIdToken] = useState("");
