@@ -6,11 +6,10 @@ import './read.css';
 
 const Read = () => {
 
-    componentDidMount();{
+  
     setTimeout(function() {
         window.location.reload(false);
     }, 2000)
-    }
 
     // const [userId, setUserId] = useState("");
     // const [displayName, setDisplayName] = useState("");
