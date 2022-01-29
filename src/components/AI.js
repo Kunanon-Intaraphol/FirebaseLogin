@@ -89,16 +89,8 @@ const Read = () => {
 
 const Frame = ({title , text , FAI ,Status ,TAI}) => {
 
-    // const i = true
-
     console.log(title + " " + text + " " + FAI + " " + TAI);
     if(Status == "read"){
-        // if(i == true){
-        //     setTimeout(function() {
-        //         window.location.reload(false);
-        //     }, 5000)
-        //     i == false
-        // }
         console.log("inif")
         return(
         
@@ -119,7 +111,9 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
         
     }
     else{
-       
+        setTimeout(function() {
+            window.location.reload(false);
+        }, 2000)
         return(
         
             <center>
