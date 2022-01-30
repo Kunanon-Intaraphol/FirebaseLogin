@@ -95,7 +95,7 @@ const Contact = () => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <center>
-        <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10,marginTop:20,marginBottom:20}}/>
+        <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10,marginTop:20,marginBottom:20,marginTop:20}}/>
         <h2>สวัสดีคุณ : {displayName}</h2>
       </center>
     
@@ -149,6 +149,7 @@ const Contact = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        marginBottom: "30px",
       }}
       >
         ส่ง
