@@ -133,6 +133,7 @@ const Contact = () => {
           height: "150px",
           marginLeft: "30px",
           marginRight: "auto",
+          marginBottom: "20px",
           }} 
         
       ></textarea>
