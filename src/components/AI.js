@@ -120,7 +120,7 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
         
             <center>
                 <div className="div">
-    <p style={{fontSize: '20px'}}>โปรดรอสักครู ...ระบบกำลังประมวลผล... กรุณากดปุ่มเพื่อรับคำตอบ</p>     
+    <p style={{fontSize: '20px'}}>โปรดรอสักครู่ ...ระบบกำลังประมวลผล... กรุณากดปุ่มเพื่อรับคำตอบ</p>     
 
     <button style={{    
         width: "250px",
