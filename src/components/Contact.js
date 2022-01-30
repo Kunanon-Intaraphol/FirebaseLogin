@@ -117,7 +117,7 @@ const Contact = () => {
         width: "300px",
         height: "60px",
         marginLeft: "30px",
-        marginRight: "auto",
+        marginRight: "30px",
         }} 
       />
 
@@ -133,7 +133,7 @@ const Contact = () => {
           width: "300px",
           height: "150px",
           marginLeft: "30px",
-          marginRight: "auto",
+          marginRight: "30px",
           marginBottom: "20px",
           }} 
         
