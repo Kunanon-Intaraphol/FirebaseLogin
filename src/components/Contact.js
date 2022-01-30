@@ -117,7 +117,6 @@ const Contact = () => {
         height: "60px",
         marginLeft: "30px",
         marginRight: "auto",
-        marginTop: "30px",
         }} 
       />
 
