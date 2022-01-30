@@ -113,7 +113,7 @@ const Contact = () => {
         padding: "20px",
         width: "300px",
         height: "60px",
-        marginLeft: "auto",
+        marginLeft: "30px",
         marginRight: "auto",
         marginTop: "30px",
         }} 
@@ -129,7 +129,7 @@ const Contact = () => {
           padding: "20px",
           width: "300px",
           height: "150px",
-          marginLeft: "auto",
+          marginLeft: "30px",
           marginRight: "auto",
           }} 
         
