@@ -100,8 +100,8 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
         
             <center>
                 <div className="div">
-    <h2 style={{marginBottom: "40px",marginTop:"40px", color: "#3F89F3",fontSize:"16px"}}>โปรดใช้ดุลพินิจของท่านในการตัดสินใจ</h2>
-    <h6>ผลลัพธ์</h6>
+    <h7>โปรดใช้ดุลพินิจของท่านในการตัดสินใจ</h7>
+    
     <h4>มีความเสี่ยงที่จะเป็นข่าวปลอม : {FAI}%{"\n"}</h4>
     <h4>มีความคล้ายที่จะเป็นข่าวจริง : {TAI}%{"\n"}</h4>
 
