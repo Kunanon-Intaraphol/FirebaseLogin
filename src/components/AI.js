@@ -2,42 +2,12 @@
 import {db} from "../firebase";
 import React, { useState } from 'react';
 import './read.css';
-// import liff from '@line/liff';
 
 const Read = () => {
 
     setTimeout(function() {
         window.location.reload(false);
-    }, 5000)
-        
-
-    // const [userId, setUserId] = useState("");
-    // const [displayName, setDisplayName] = useState("");
-    // const [idToken, setIdToken] = useState("");
-    // const [pictureUrl, setPictureUrl] = useState("");
-  
-    // const initLine = () => {
-    //   liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
-    //     if (liff.isLoggedIn()) {
-    //       runApp();
-    //     } else {
-    //       liff.login();
-    //     }
-    //   }, err => console.error(err));
-    //   }
-    // const runApp = () => {
-    //   const idToken = liff.getIDToken();
-    //   setIdToken(idToken);
-    //   liff.getProfile().then(profile => {
-    //     console.log(profile);
-    //     setDisplayName(profile.displayName);
-    //     setUserId(profile.userId);
-    //     setPictureUrl(profile.pictureUrl);
-    //   }).catch(err => console.error(err));
-    // }
-    // useEffect(() => {
-    //   initLine();
-    // }, []);
+    }, 7000)
     
 
     const [info , setInfo] = useState([]);
