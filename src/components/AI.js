@@ -53,7 +53,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().then((querySnapshot) => {
+        db.collection("contacts").doc(Userid).get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -81,9 +81,11 @@ const Read = () => {
             info.map((contacts) => (
             <Frame title={contacts.title} 
                    text={contacts.text} 
+                   Userid={contacts. userId} 
                    FAI={contacts.FAI}
                    TAI={contacts.TAI}
                    Status={contacts.status}/>
+                   
             ))
         }
         </div>
