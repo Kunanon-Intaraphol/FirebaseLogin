@@ -102,7 +102,8 @@ const Contact = () => {
       <h1>ตรวจสอบข่าวสาร</h1>
       <h6>กรุณาระบุข่าวสารที่ต้องการพร้อมรายละเอียดข่าวสารแบบข้อความ</h6>
       <h2>หัวข้อข่าว</h2>
-  
+
+      <center>
       <label></label>
       <input
         placeholder="หัวข้อข่าว"
@@ -119,8 +120,12 @@ const Contact = () => {
         marginRight: "auto",
         }} 
       />
+      </center>
+
 
       <h2>เนื้อหาข่าว</h2>
+
+      <center>
       <label></label>
       <textarea
         placeholder="เนื้อหาข่าว"
@@ -137,6 +142,7 @@ const Contact = () => {
           }} 
         
       ></textarea>
+      </center>
 
       <button
         type="submit"
