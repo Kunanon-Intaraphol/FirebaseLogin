@@ -113,7 +113,7 @@ const Contact = () => {
         required
         style={{ 
         padding: "20px",
-        width: "300px",
+        width: "275px",
         height: "60px",
         marginLeft: "30px",
         marginRight: "auto",
@@ -129,7 +129,7 @@ const Contact = () => {
         required
         style={{ 
           padding: "20px",
-          width: "300px",
+          width: "275px",
           height: "150px",
           marginLeft: "30px",
           marginRight: "auto",
