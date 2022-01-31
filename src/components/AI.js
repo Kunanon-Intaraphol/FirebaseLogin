@@ -80,8 +80,8 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
 
     <PieChart>
     data={[
-    { title: 'มีความเสี่ยงที่จะเป็นข่าวปลอม', value: {FAI}, color: '#E38627' },
-    { title: 'มีความคล้ายที่จะเป็นข่าวจริง', value: {TAI}, color: '#C13C37' },
+    { title: 'มีความเสี่ยงที่จะเป็นข่าวปลอม', value: FAI, color: '#E38627' },
+    { title: 'มีความคล้ายที่จะเป็นข่าวจริง', value: TAI, color: '#C13C37' },
   ]}
     </PieChart>
 
