@@ -10,7 +10,7 @@ const Read = () => {
     const [idToken, setIdToken] = useState("");
 
     const initLine = () => {
-        liff.init({ liffId: '1656553430-MzgGexx9' }, () => {
+        liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
           if (liff.isLoggedIn()) {
             runApp();
           } else {
