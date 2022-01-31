@@ -2,8 +2,36 @@
 import {db} from "../firebase";
 import React, { useState } from 'react';
 import './read.css';
+import liff from '@line/liff';
 
 const Read = () => {
+
+    const [userId, setUserId] = useState("");
+    const [idToken, setIdToken] = useState("");
+
+    const initLine = () => {
+        liff.init({ liffId: '1656553430-MzgGexx9' }, () => {
+          if (liff.isLoggedIn()) {
+            runApp();
+          } else {
+            liff.login();
+          }
+        }, err => console.error(err));
+        }
+      const runApp = () => {
+        const idToken = liff.getIDToken();
+        setIdToken(idToken);
+        liff.getProfile().then(profile => {
+          console.log(profile);
+          setUserId(profile.userId);
+        }).catch(err => console.error(err));
+    }
+      useEffect(() => {
+        initLine();
+    }, []);
+
+    const Uid = userId
+    const Idtk = idToken
 
     setTimeout(function() {
         window.location.reload(false);
@@ -23,7 +51,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().then((querySnapshot) => {
+        db.collection("contacts").doc(Uid,Idtk).get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
