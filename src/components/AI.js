@@ -2,36 +2,10 @@
 import {db} from "../firebase";
 import React, { useState } from 'react';
 import './read.css';
-import liff from '@line/liff';
+import { PieChart } from 'react-minimal-pie-chart';
+
 
 const Read = () => {
-
-    const [userId, setUserId] = useState("");
-    const [idToken, setIdToken] = useState("");
-
-    const initLine = () => {
-        liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
-          if (liff.isLoggedIn()) {
-            runApp();
-          } else {
-            liff.login();
-          }
-        }, err => console.error(err));
-        }
-      const runApp = () => {
-        const idToken = liff.getIDToken();
-        setIdToken(idToken);
-        liff.getProfile().then(profile => {
-          console.log(profile);
-          setUserId(profile.userId);
-        }).catch(err => console.error(err));
-    }
-      useEffect(() => {
-        initLine();
-    }, []);
-
-    const Uid = userId
-    const Idtk = idToken
 
     setTimeout(function() {
         window.location.reload(false);
@@ -51,7 +25,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").doc(Uid,Idtk).get().then((querySnapshot) => {
+        db.collection("contacts").get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -103,6 +77,13 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
     
     <h4 style={{marginTop:"30px"}}>มีความเสี่ยงที่จะเป็นข่าวปลอม : {FAI}%{"\n"}</h4>
     <h4>มีความคล้ายที่จะเป็นข่าวจริง : {TAI}%{"\n"}</h4>
+
+    <PieChart
+  data={[
+    { title: 'มีความเสี่ยงที่จะเป็นข่าวปลอม', value: {FAI}, color: '#E38627' },
+    { title: 'มีความคล้ายที่จะเป็นข่าวจริง', value: {TAI}, color: '#C13C37' },
+  ]}
+/>;
 
     <p>
     <h4>หัวข้อข่าว </h4> {title}
