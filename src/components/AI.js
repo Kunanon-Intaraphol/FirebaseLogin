@@ -2,7 +2,6 @@
 import {db} from "../firebase";
 import React, { useState } from 'react';
 import './read.css';
-import { PieChart } from 'react-minimal-pie-chart';
 
 
 const Read = () => {
@@ -77,13 +76,6 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
     
     <h4 style={{marginTop:"30px"}}>มีความเสี่ยงที่จะเป็นข่าวปลอม : {FAI}%{"\n"}</h4>
     <h4>มีความคล้ายที่จะเป็นข่าวจริง : {TAI}%{"\n"}</h4>
-
-    <PieChart>
-    data={[
-    { title: 'มีความเสี่ยงที่จะเป็นข่าวปลอม', value: FAI, color: '#E38627' },
-    { title: 'มีความคล้ายที่จะเป็นข่าวจริง', value: TAI, color: '#C13C37' },
-  ]}
-    </PieChart>
 
     <p>
     <h4>หัวข้อข่าว </h4> {title}
