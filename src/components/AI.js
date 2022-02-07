@@ -75,8 +75,8 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
                 <div className="div">
     <h7 style={{marginTop:"30px",marginBottom:"30px",fontSize:"16px",marginleft:"30px",color:"#3F89F3"}}>โปรดใช้ดุลพินิจของท่านในการตัดสินใจ</h7>
     
-    <h4 style={{marginTop:"30px"}}>มีความเสี่ยงที่จะเป็นข่าวปลอม  {"\n"}</h4> <h4><p><h8 style={{fontSize:"22px",color:"#e82a4d",marginTop:"10px"}}>{FAI}%{"\n"}</h8></p></h4>
-    <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><p><h9 style={{fontSize:"22px",color:"#18d93e",marginTop:"5px"}}>{TAI}%{"\n"}</h9></p></h4>
+    <h4 style={{marginTop:"30px"}}>มีความเสี่ยงที่จะเป็นข่าวปลอม  {"\n"}</h4> <h4><h8 style={{fontSize:"22px",color:"#e82a4d",marginTop:"5px"}}>{FAI}%{"\n"}</h8></h4>
+    <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e",marginTop:"5px"}}>{TAI}%{"\n"}</h9></h4>
 
     <p style={{marginTop:"30px"}}>
     <h4>หัวข้อข่าว </h4> {title}
