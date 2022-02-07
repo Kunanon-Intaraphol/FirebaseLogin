@@ -95,7 +95,8 @@ const Contact = () => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <center>
-        <img src = {pictureUrl} style={{width:200, height:200 ,borderRadius:10,marginTop:20,marginBottom:20,marginTop:60}}/>
+        <img src = {pictureUrl} style={{width:200, height:200 ,
+          borderRadius:10,marginTop:20,marginBottom:20,marginTop:60}}/>
         <h2>สวัสดีคุณ : {displayName}</h2>
       </center>
     
