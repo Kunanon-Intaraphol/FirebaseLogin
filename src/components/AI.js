@@ -78,6 +78,7 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
     <h4 style={{marginTop:"30px"}}>มีความเสี่ยงที่จะเป็นข่าวปลอม  {"\n"}</h4> <h4><h8 style={{fontSize:"22px",color:"#e82a4d",marginTop:"5px"}}>{FAI}%{"\n"}</h8></h4>
     <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e",marginTop:"5px"}}>{TAI}%{"\n"}</h9></h4>
 
+
     <p style={{marginTop:"30px"}}>
     <h4>หัวข้อข่าว </h4> {title}
     <h4>เนื้อหาข่าว </h4> {text}
