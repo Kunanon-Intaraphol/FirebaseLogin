@@ -53,8 +53,8 @@ const Read = () => {
             </center>
         {
             info.map((contacts) => (
-            <Frame news={contacts.news} 
-                   sentence={contacts.sentence} 
+            <Frame News={contacts.news} 
+                   Sentence={contacts.sentence} 
                    FAI={contacts.FAI}
                    TAI={contacts.TAI}
                    Status={contacts.status}/>
@@ -66,9 +66,9 @@ const Read = () => {
     );
 }
 
-const Frame = ({news , sentence , FAI ,Status ,TAI}) => {
+const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
 
-    console.log(news + " " + sentence + " " + FAI + " " + TAI);
+    console.log(News + " " + Sentence + " " + FAI + " " + TAI);
     if(Status == "read"){
         console.log("inif")
 
@@ -82,8 +82,8 @@ const Frame = ({news , sentence , FAI ,Status ,TAI}) => {
     <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e"}}>{TAI}%{"\n"}</h9></h4>
 
     <p>
-    <h4>หัวข้อข่าว </h4> {news}
-    <h4>เนื้อหาข่าว </h4> {sentence}
+    <h4>หัวข้อข่าว </h4> {News}
+    <h4>เนื้อหาข่าว </h4> {Sentence}
     </p>        
     
                 </div>
