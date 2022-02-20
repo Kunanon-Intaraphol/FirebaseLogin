@@ -6,7 +6,7 @@ import './read.css';
 
 const Read = () => {
 
-    const { data } = this.props.Uid
+    // const { data } = this.props.Uid
 
 
     setTimeout(function() {
@@ -27,7 +27,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().doc(data).then((querySnapshot) => {
+        db.collection("contacts").get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
