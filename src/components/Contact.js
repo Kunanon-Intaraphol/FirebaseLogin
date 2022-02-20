@@ -3,15 +3,15 @@ import "../components/app.css";
 import {db} from "../firebase";
 import DatePicker from "react-datepicker";
 import AI from "./AI"
-import { Link , useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import liff from '@line/liff';
 // import "react-datepicker/dist/react-datepicker.css";
 
 const Contact = () => {
   // const [name, setName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
-  const [title, setNews] = useState("");
-  const [text, setSentence] = useState("");
+  const [news, setNews] = useState("");
+  const [sentence, setSentence] = useState("");
   const [status, setstatus] = useState("unread");
   const [FAI, setFAI] = useState("");
   const [TAI, setTAI] = useState("");
@@ -127,7 +127,7 @@ const Contact = () => {
       <textarea
         placeholder="เนื้อหาข่าว"
         value={text}
-        onChange={(e) => news(e.target.value)}
+        onChange={(e) => setNews(e.target.value)}
         required
         style={{ 
           padding: "20px",
