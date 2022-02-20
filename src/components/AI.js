@@ -6,6 +6,9 @@ import './read.css';
 
 const Read = () => {
 
+    const { data } = this.props.Uid
+
+
     setTimeout(function() {
         window.location.reload(false);
     }, 7000)
@@ -24,7 +27,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().then((querySnapshot) => {
+        db.collection("contacts").get().doc(data).then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -50,8 +53,8 @@ const Read = () => {
             </center>
         {
             info.map((contacts) => (
-            <Frame title={contacts.title} 
-                   text={contacts.text} 
+            <Frame news={contacts.news} 
+                   sentence={contacts.sentence} 
                    FAI={contacts.FAI}
                    TAI={contacts.TAI}
                    Status={contacts.status}/>
@@ -63,9 +66,9 @@ const Read = () => {
     );
 }
 
-const Frame = ({title , text , FAI ,Status ,TAI}) => {
+const Frame = ({news , sentence , FAI ,Status ,TAI}) => {
 
-    console.log(title + " " + text + " " + FAI + " " + TAI);
+    console.log(news + " " + sentence + " " + FAI + " " + TAI);
     if(Status == "read"){
         console.log("inif")
 
@@ -79,8 +82,8 @@ const Frame = ({title , text , FAI ,Status ,TAI}) => {
     <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e"}}>{TAI}%{"\n"}</h9></h4>
 
     <p>
-    <h4>หัวข้อข่าว </h4> {title}
-    <h4>เนื้อหาข่าว </h4> {text}
+    <h4>หัวข้อข่าว </h4> {news}
+    <h4>เนื้อหาข่าว </h4> {sentence}
     </p>        
     
                 </div>

@@ -10,8 +10,8 @@ import liff from '@line/liff';
 const Contact = () => {
   // const [name, setName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
-  const [title, settitle] = useState("");
-  const [text, setMessage] = useState("");
+  const [title, setNews] = useState("");
+  const [text, setSentence] = useState("");
   const [status, setstatus] = useState("unread");
   const [FAI, setFAI] = useState("");
   const [TAI, setTAI] = useState("");
@@ -57,8 +57,8 @@ const Contact = () => {
       .set({
         // name: name,
         startDate: startDate,
-        title: title,
-        text: text,
+        news: news,
+        sentence: sentence,
         status:status,
         FAI:FAI,
         TAI:TAI,
@@ -80,8 +80,8 @@ const Contact = () => {
       });
 
     setStartDate("");
-    settitle("");
-    setMessage("");
+    setNews("");
+    setSentence("");
     setstatus("");
     setFAI("");
     setTAI("");
@@ -105,7 +105,7 @@ const Contact = () => {
       <h2>หัวข้อข่าว</h2>
 
       
-      <label></label>
+      {/* <label></label>
       <input
         placeholder="หัวข้อข่าว"
         value={title}
@@ -120,14 +120,14 @@ const Contact = () => {
         marginLeft: "30px",
         marginRight: "30px",
         }} 
-      />
+      /> */}
 
       <h2>เนื้อหาข่าว</h2>
       <label></label>
       <textarea
         placeholder="เนื้อหาข่าว"
         value={text}
-        onChange={(e) => setMessage(e.target.value)}
+        onChange={(e) => news(e.target.value)}
         required
         style={{ 
           padding: "20px",
@@ -139,7 +139,12 @@ const Contact = () => {
           }} 
         
       ></textarea>
-
+<Link
+  to={{
+    pathname: "/AI",
+    data: Uid 
+  }}
+>
       <button
         type="submit"
         style={{ background: loader ? "#ccc" : " #3F89F3", 
@@ -156,7 +161,7 @@ const Contact = () => {
       >
         ส่ง
       </button>
-     
+      </Link>
     </form>
   );
 };
