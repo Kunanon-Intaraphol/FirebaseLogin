@@ -2,11 +2,11 @@
 import {db} from "../firebase";
 import React, { useState } from 'react';
 import './read.css';
-
+import liff from '@line/liff';
 
 const Read = () => {
-
-    const { data } = this.props.Uid
+    
+    // const { data } = this.props.Uid
 
 
     setTimeout(function() {
@@ -15,7 +15,36 @@ const Read = () => {
     
 
     const [info , setInfo] = useState([]);
-  
+    const [userId, setUserId] = useState("");
+    const [displayName, setDisplayName] = useState("");
+    const [idToken, setIdToken] = useState("");
+    const [pictureUrl, setPictureUrl] = useState("");
+
+    const initLine = () => {
+        liff.init({ liffId: '1656553430-MzgGexx9' }, () => {
+          if (liff.isLoggedIn()) {
+            runApp();
+          } else {
+            liff.login();
+          }
+        }, err => console.error(err));
+        }
+    const runApp = () => {
+        const idToken = liff.getIDToken();
+        setIdToken(idToken);
+        liff.getProfile().then(profile => {
+          console.log(profile);
+          setDisplayName(profile.displayName);
+          setUserId(profile.userId);
+          setPictureUrl(profile.pictureUrl);
+        }).catch(err => console.error(err));
+    }
+      useEffect(() => {
+        initLine();
+    }, []);
+
+
+    
     // Start the fetch operation as soon as
     // the page loads
     window.addEventListener('load', () => {
@@ -27,7 +56,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().document(data).then((querySnapshot) => {
+        db.collection("contacts").get().doc(userId,displayName,idToken,pictureUrl).then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display

@@ -142,12 +142,12 @@ const Contact = () => {
           }} 
         
       ></textarea>
-      <Link
+      {/* <Link
         to={{
         pathname: "/AI",
         data: userId  
         }}
-      >
+      > */}
       <button
         type="submit"
         style={{ background: loader ? "#ccc" : " #3F89F3", 
@@ -166,7 +166,7 @@ const Contact = () => {
       >
         ส่ง
       </button>
-      </Link>
+      {/* </Link> */}
     </form>
   );
 };
