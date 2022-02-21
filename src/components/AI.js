@@ -56,7 +56,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().doc(userId,displayName,idToken,pictureUrl).then((querySnapshot) => {
+        db.collection("contacts").doc(userId).get.then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
