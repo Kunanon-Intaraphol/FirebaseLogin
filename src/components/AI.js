@@ -54,7 +54,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").get().then((querySnapshot) => {
+        db.collection("contacts").document(userId).get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
@@ -109,8 +109,8 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
     <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e"}}>{TAI}%{"\n"}</h9></h4>
 
     <p>
-    <h4>หัวข้อข่าว </h4> {News}
-    <h4>เนื้อหาข่าว </h4> {Sentence}
+    <h4>เนื้อหาข่าว </h4> {News}
+    <h4>รายละเอียดเพิ่มเติม </h4> {Sentence}
     </p>        
     
                 </div>
@@ -118,6 +118,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
         );
         
     }
+
     else{
 
         return(
