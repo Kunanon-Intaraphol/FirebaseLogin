@@ -42,8 +42,6 @@ const Read = () => {
       useEffect(() => {
         initLine();
     }, []);
-
-    const userId = Uid
     
     // Start the fetch operation as soon as
     // the page loads
@@ -56,7 +54,7 @@ const Read = () => {
     const Fetchdata = ()=>{
         // const Uid = userId
 
-        db.collection("contacts").doc(Uid).get.then((querySnapshot) => {
+        db.collection("contacts").doc(userId).get.then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
