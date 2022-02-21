@@ -126,7 +126,7 @@ const Contact = () => {
       <label></label>
       <textarea
         placeholder="เนื้อหาข่าว"
-        value={text}
+        value={news}
         onChange={(e) => setNews(e.target.value)}
         required
         style={{ 
