@@ -3,7 +3,7 @@ import "../components/app.css";
 import {db} from "../firebase";
 import DatePicker from "react-datepicker";
 import AI from "./AI"
-import { useNavigate } from 'react-router-dom'
+import { Link ,useNavigate } from 'react-router-dom'
 import liff from '@line/liff';
 // import "react-datepicker/dist/react-datepicker.css";
 
