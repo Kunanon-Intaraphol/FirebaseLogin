@@ -43,7 +43,7 @@ const Read = () => {
         initLine();
     }, []);
     
-    const Uid = userId
+    
 
     // Start the fetch operation as soon as
     // the page loads
@@ -54,7 +54,8 @@ const Read = () => {
   
     // Fetch the required data using the get() method
     const Fetchdata = ()=>{
-        // const Uid = userId
+
+        const Uid = userId
 
         db.collection("contacts").doc(Uid).get().then((querySnapshot) => {
             console.log("incollection")
