@@ -145,7 +145,7 @@ const Contact = () => {
       <Link
         to={{
         pathname: "/AI",
-        data: Uid  
+        data: userId  
         }}
       >
       <button
