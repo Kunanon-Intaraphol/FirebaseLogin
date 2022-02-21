@@ -137,6 +137,7 @@ const Contact = () => {
           marginLeft: "auto",
           marginRight: "auto",
           marginRight: "30px",
+          marginLeft: "30px",
           marginBottom: "20px",
           }} 
         
