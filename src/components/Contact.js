@@ -133,7 +133,9 @@ const Contact = () => {
           padding: "20px",
           width: "300px",
           height: "150px",
-          marginLeft: "30px",
+          // marginLeft: "30px",
+          marginLeft: "auto",
+          marginRight: "auto",
           marginRight: "30px",
           marginBottom: "20px",
           }} 
@@ -157,6 +159,8 @@ const Contact = () => {
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: "40px",
+        marginLeft: "auto",
+        marginRight: "auto",
       }}
       >
         ส่ง
