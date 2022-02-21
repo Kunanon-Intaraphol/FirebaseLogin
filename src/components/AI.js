@@ -15,33 +15,34 @@ const Read = () => {
     
 
     const [info , setInfo] = useState([]);
-    const [userId, setUserId] = useState("");
-    const [displayName, setDisplayName] = useState("");
-    const [idToken, setIdToken] = useState("");
-    const [pictureUrl, setPictureUrl] = useState("");
 
-    const initLine = () => {
-        liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
-          if (liff.isLoggedIn()) {
-            runApp();
-          } else {
-            liff.login();
-          }
-        }, err => console.error(err));
-        }
-    const runApp = () => {
-        const idToken = liff.getIDToken();
-        setIdToken(idToken);
-        liff.getProfile().then(profile => {
-          console.log(profile);
-          setDisplayName(profile.displayName);
-          setUserId(profile.userId);
-          setPictureUrl(profile.pictureUrl);
-        }).catch(err => console.error(err));
-    }
-      useEffect(() => {
-        initLine();
-    }, []);
+    // const [userId, setUserId] = useState("");
+    // const [displayName, setDisplayName] = useState("");
+    // const [idToken, setIdToken] = useState("");
+    // const [pictureUrl, setPictureUrl] = useState("");
+
+    // const initLine = () => {
+    //     liff.init({ liffId: '1656553430-qgAJV55b' }, () => {
+    //       if (liff.isLoggedIn()) {
+    //         runApp();
+    //       } else {
+    //         liff.login();
+    //       }
+    //     }, err => console.error(err));
+    //     }
+    // const runApp = () => {
+    //     const idToken = liff.getIDToken();
+    //     setIdToken(idToken);
+    //     liff.getProfile().then(profile => {
+    //       console.log(profile);
+    //       setDisplayName(profile.displayName);
+    //       setUserId(profile.userId);
+    //       setPictureUrl(profile.pictureUrl);
+    //     }).catch(err => console.error(err));
+    // }
+    //   useEffect(() => {
+    //     initLine();
+    // }, []);
     
     
 
