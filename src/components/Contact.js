@@ -142,12 +142,12 @@ const Contact = () => {
           }} 
         
       ></textarea>
-<Link
-  to={{
-    pathname: "/AI",
-    data: Uid 
-  }}
->
+      <Link
+        to={{
+        pathname: "/AI",
+        data: Uid  
+        }}
+      >
       <button
         type="submit"
         style={{ background: loader ? "#ccc" : " #3F89F3", 
