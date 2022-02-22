@@ -94,7 +94,7 @@ const Contact = () => {
   };
 
   return (
-  
+    <center>
     <form className="form" onSubmit={handleSubmit}>
       <center>
         <img src = {pictureUrl} style={{width:200, height:200 ,
@@ -122,7 +122,7 @@ const Contact = () => {
         marginRight: "30px",
         }} 
       /> */}
-
+      
       <h2>โปรดระบุข่าว</h2>
       <textarea
         placeholder="เนื้อหาข่าว"
@@ -167,7 +167,7 @@ const Contact = () => {
       </button>
       {/* </Link> */}
     </form>
-   
+    </center>
   );
 };
 
