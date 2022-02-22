@@ -69,11 +69,11 @@ textarea:focus {
 }
 
 
-.form > textarea {
+/* .form > textarea {
   height: 150px;
-  /* max-width: 500px; */
+  max-width: 500px;
   min-height: 100px;
-}
+} */
 
 .form > label {
   padding-bottom: 10px;
