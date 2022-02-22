@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import "../components/app.css";    
+import "../components/app.css";    
 import {db} from "../firebase";
 import DatePicker from "react-datepicker";
 import AI from "./AI"
