@@ -35,7 +35,7 @@ button {
   margin-bottom: 5px;
   color: #3F89F3;
   font-size: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .form > h2 {
@@ -69,11 +69,11 @@ textarea:focus {
 }
 
 
-/* .form > textarea {
+.form > textarea {
   height: 150px;
   max-width: 500px;
   min-height: 100px;
-} */
+}
 
 .form > label {
   padding-bottom: 10px;

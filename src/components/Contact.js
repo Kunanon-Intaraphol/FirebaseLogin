@@ -97,13 +97,13 @@ const Contact = () => {
     <center>
     <form className="form" onSubmit={handleSubmit}>
       <center>
-        <img src = {pictureUrl} style={{width:200, height:200 ,
+        <img src = {pictureUrl} style={{width:150, height:150 ,
           borderRadius:10,marginTop:20,marginBottom:20,marginTop:60}}/>
         <h2>สวัสดีคุณ : {displayName}</h2>
       </center>
     
-      <h1>ตรวจสอบข่าวสาร</h1>
-      <h6>กรุณาระบุข่าวสารที่ต้องการพร้อมรายละเอียดข่าวสารแบบข้อความ</h6>
+      <h1 tyle={{marginTop:"2px"}}>ตรวจสอบข่าวสาร</h1>
+      <h6>กรุณาระบุข่าวสารที่ต้องการ {"\n"}พร้อมรายละเอียดข่าวสารแบบข้อความ</h6>
 
       <h2>โปรดระบุข่าว</h2>
       <label></label>
