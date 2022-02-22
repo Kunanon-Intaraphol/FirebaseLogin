@@ -14,7 +14,6 @@ const Read = () => {
         window.location.reload(false);
     }, 7000)
     
-
     const [info , setInfo] = useState([]);
 
     // const [userId, setUserId] = useState("");    
@@ -59,7 +58,7 @@ const Read = () => {
 
         // const Uid = userId
 
-        db.collection("contacts").doc("U960c2d93e6a6e98e3fbf59ccf9be8a2e").get().then((querySnapshot) => {
+        db.collection("contacts").get().then((querySnapshot) => {
             console.log("incollection")
             // Loop through the data and store
             // it in array to display
