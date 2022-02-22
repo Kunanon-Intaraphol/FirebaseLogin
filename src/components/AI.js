@@ -3,9 +3,9 @@ import {db} from "../firebase";
 import React, { useState , useEffect } from 'react';
 import './read.css';
 // import PercentageCircle from 'reactjs-percentage-circle';
-import { CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar , CircularProgressbar,buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-
+import ChangingProgressProvider from "./ChangingProgressProvider";
 // import liff from '@line/liff';
 
 const Read = () => {
@@ -135,7 +135,9 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
             styles={buildStyles({
               rotation: 1 / 2 + 1 / 8,
               strokeLinecap: "butt",
+              textColor:"#3F89F3",
               trailColor: "#3F89F3"
+              
             })}
           />
         )}
