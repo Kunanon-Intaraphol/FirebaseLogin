@@ -122,7 +122,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
     </div> */}
 
 
-    <div style={{ width: 150, height: 150 ,marginTop:10}}>
+    <div style={{ width: 150, height: 150 ,marginTop:20}}>
         <CircularProgressbar value={INTFAI} />
     </div>
 
