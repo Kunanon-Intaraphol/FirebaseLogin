@@ -114,13 +114,6 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
             
                 <div className="div">
     <h7 style={{marginTop:"30px",marginBottom:"30px",fontSize:"16px",marginleft:"30px",color:"#3F89F3"}}>โปรดใช้ดุลพินิจของท่านในการตัดสินใจ</h7>
-    
-    {/* <div>
-    <PercentageCircle percent={80}></PercentageCircle>
-    <PercentageCircle percent={80}>
-      <p>Children</p>
-    </PercentageCircle>
-    </div> */}
 
 
     <div style={{ width: 150, height: 150 ,marginTop:20,}}>
@@ -135,7 +128,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
         />
     </div>
 
-    <ChangingProgressProvider style={{ width: "150px", height: "150px" , marginTop:"20px"}}>
+    {/* <ChangingProgressProvider style={{ width: "150px", height: "150px" , marginTop:"20px"}}>
         {value => (
           <CircularProgressbar
             value={INTFAI}
@@ -151,7 +144,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
             })}
           />
         )}
-    </ChangingProgressProvider>
+    </ChangingProgressProvider> */}
 
 
 
