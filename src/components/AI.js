@@ -2,6 +2,7 @@
 import {db} from "../firebase";
 import React, { useState , useEffect } from 'react';
 import './read.css';
+import PercentageCircle from 'reactjs-percentage-circle';
 
 // import liff from '@line/liff';
 
@@ -104,12 +105,19 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
         console.log("inif")
 
         return(
-           
-        
             <center>
+                
+            
                 <div className="div">
     <h7 style={{marginTop:"30px",marginBottom:"30px",fontSize:"16px",marginleft:"30px",color:"#3F89F3"}}>โปรดใช้ดุลพินิจของท่านในการตัดสินใจ</h7>
     
+    <div>
+    <PercentageCircle percent={80}></PercentageCircle>
+    <PercentageCircle percent={80}>
+      <p>Children</p>
+    </PercentageCircle>
+    </div>
+
     <h4 style={{marginTop:"30px"}}>มีความเสี่ยงที่จะเป็นข่าวปลอม  {"\n"}</h4> <h4><h8 style={{fontSize:"22px",color:"#e82a4d"}}>{FAI}%{"\n"}</h8></h4>
     <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e"}}>{TAI}%{"\n"}</h9></h4>
 
