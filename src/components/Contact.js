@@ -124,7 +124,7 @@ const Contact = () => {
       /> */}
 
       <h2>โปรดระบุข่าว</h2>
-      <label></label>
+      <label>เนื้อหาข่าว</label>
       <textarea
         placeholder="เนื้อหาข่าว"
         value={news}
