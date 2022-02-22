@@ -94,7 +94,7 @@ const Read = () => {
             ))
         }
         </div>
-        </AutoScale>
+        
     );
 }
 
@@ -105,7 +105,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
         console.log("inif")
 
         return(
-            <AutoScale>
+           
         
             <center>
                 <div className="div">
