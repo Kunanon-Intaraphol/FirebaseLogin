@@ -15,6 +15,7 @@ const Contact = () => {
   const [sentence, setSentence] = useState("");
   const [status, setstatus] = useState("unread");
   const [FAI, setFAI] = useState("");
+  const [FAI, setintFAI] = useState("");
   const [TAI, setTAI] = useState("");
   const [userId, setUserId] = useState("");
   const [displayName, setDisplayName] = useState("");
@@ -62,6 +63,7 @@ const Contact = () => {
         sentence: sentence,
         status:status,
         FAI:FAI,
+        intFAI:intFAI,
         TAI:TAI,
         userId:userId,
         displayName:displayName,
@@ -85,6 +87,7 @@ const Contact = () => {
     setSentence("");
     setstatus("");
     setFAI("");
+    setintFAI("");
     setTAI("");
     setUserId("");
     setDisplayName("");

@@ -90,6 +90,7 @@ const Read = () => {
             <Frame News={contacts.news} 
                    Sentence={contacts.sentence} 
                    FAI={contacts.FAI}
+                   INTFAI={contacts.intFAI}
                    TAI={contacts.TAI}
                    Status={contacts.status}/>
                    
@@ -100,9 +101,9 @@ const Read = () => {
     );
 }
 
-const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
+const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
 
-    console.log(News + " " + Sentence + " " + FAI + " " + TAI);
+    console.log(News + " " + Sentence + " " + FAI + " " + TAI + " " + INTFAI);
     if(Status == "read"){
         console.log("inif")
 
@@ -121,8 +122,8 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
     </div> */}
 
 
-    <div style={{ width: 200, height: 200 }}>
-        <CircularProgressbar value={66} />
+    <div style={{ width: 150, height: 150 ,marginTop:10}}>
+        <CircularProgressbar value={INTFAI} />
     </div>
 
 
