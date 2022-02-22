@@ -131,13 +131,13 @@ const Contact = () => {
         required
         style={{ 
           padding: "20px",
-          width: "300px",
+          width: "auto",
           height: "150px",
           // marginLeft: "30px",
           marginLeft: "auto",
           marginRight: "auto",
-          marginRight: "30px",
-          marginLeft: "30px",
+          // marginRight: "30px",
+          // marginLeft: "30px",
           marginBottom: "20px",
           }} 
       ></textarea>
