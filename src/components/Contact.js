@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../components/app.css";    
+// import "../components/app.css";    
 import {db} from "../firebase";
 import DatePicker from "react-datepicker";
 import AI from "./AI"
@@ -114,7 +114,7 @@ const Contact = () => {
         required
         style={{ 
           padding: "20px",
-          width: "500",
+          width: "300",
           height: "150px",
           marginLeft: "auto",
           marginRight: "auto",
