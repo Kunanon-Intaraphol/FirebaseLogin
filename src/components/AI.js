@@ -124,10 +124,18 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
 
 
     <div style={{ width: 150, height: 150 ,marginTop:20,}}>
-        <CircularProgressbar value={INTFAI}  text={`${INTFAI}%`} />
+        <CircularProgressbar value={INTFAI}  text={`${INTFAI}%`} circleRatio={0.75} circleRatio={0.75} styles={buildStyles({
+              rotation: 1 / 2 + 1 / 8,
+              textColor:"#3F89F3",
+              width: "150px", 
+              height: "150px",
+              trailColor: "#909090",
+              pathColor:"#3F89F3"
+            })}
+        />
     </div>
 
-    <ChangingProgressProvider values={INTFAI} style={{ width: 150, height: 150 , marginTop:20}}>
+    <ChangingProgressProvider style={{ width: "150px", height: "150px" , marginTop:"20px"}}>
         {value => (
           <CircularProgressbar
             value={INTFAI}
@@ -135,8 +143,9 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
             circleRatio={0.75}
             styles={buildStyles({
               rotation: 1 / 2 + 1 / 8,
-              strokeLinecap: "butt",
               textColor:"#3F89F3",
+              width: "150px", 
+              height: "150px",
               trailColor: "#909090",
               pathColor:"#3F89F3"
             })}
