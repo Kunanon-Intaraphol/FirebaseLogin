@@ -3,10 +3,12 @@ import {db} from "../firebase";
 import React, { useState , useEffect } from 'react';
 import './read.css';
 // import PercentageCircle from 'reactjs-percentage-circle';
-import { CircularProgressbar , CircularProgressbar,buildStyles} from 'react-circular-progressbar';
+import { CircularProgressbar , buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ChangingProgressProvider from "./ChangingProgressProvider";
 // import liff from '@line/liff';
+  import ChangingProgressProvider from "./ChangingProgressProvider";
+
 
 const Read = () => {
     
