@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../components/app.css";
+// import "../components/app.css";
 import {db} from "../firebase";
 import DatePicker from "react-datepicker";
 import AI from "./AI"
@@ -124,7 +124,6 @@ const Contact = () => {
       /> */}
 
       <h2>โปรดระบุข่าว</h2>
-      <label>เนื้อหาข่าว</label>
       <textarea
         placeholder="เนื้อหาข่าว"
         value={news}
@@ -141,7 +140,6 @@ const Contact = () => {
           marginLeft: "30px",
           marginBottom: "20px",
           }} 
-        
       ></textarea>
       {/* <Link
         to={{
