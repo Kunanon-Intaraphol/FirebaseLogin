@@ -96,33 +96,22 @@ const Contact = () => {
   return (
     <center>
     <form className="form" onSubmit={handleSubmit}>
-      <center>
-        <img src = {pictureUrl} style={{width:200, height:200 ,
-          borderRadius:10,marginTop:20,marginBottom:20,marginTop:60}}/>
-        <h2>สวัสดีคุณ : {displayName}</h2>
-      </center>
-    
-      <h1 style ={{marginRight:"auto",marginLeft:"auto"}}>ตรวจสอบข่าวสาร</h1>
-      <h6 style ={{marginRight:"auto",marginLeft:"auto"}}>กรุณาระบุข่าวสารที่ต้องการพร้อมรายละเอียดข่าวสารแบบข้อความ</h6>
 
-      
-      {/* <label></label>
-      <input
-        placeholder="หัวข้อข่าว"
-        value={title}
-        onChange={(e) => settitle(e.target.value)}
-        showTimeSelect
-        dateFormat="Pp"
-        required
-        style={{ 
-        padding: "20px",
-        width: "300px",
-        height: "60px",
-        marginLeft: "30px",
-        marginRight: "30px",
-        }} 
-      /> */}
-      
+      <img src = {pictureUrl} 
+      style={{
+        width:200, 
+        height:200 ,
+        borderRadius:10,
+        marginTop:20,
+        marginBottom:20,
+        marginTop:60
+      }}/>
+
+      <h2>สวัสดีคุณ : {displayName}</h2>
+    
+      <h1>ตรวจสอบข่าวสาร</h1>
+      <h6>กรุณาระบุข่าวสารที่ต้องการพร้อมรายละเอียดข่าวสารแบบข้อความ</h6>
+
       <h2>โปรดระบุข่าว</h2>
       <textarea
         placeholder="เนื้อหาข่าว"
@@ -131,22 +120,14 @@ const Contact = () => {
         required
         style={{ 
           padding: "20px",
-          width: "auto",
+          width: "300",
           height: "150px",
-          // marginLeft: "30px",
           marginLeft: "auto",
           marginRight: "auto",
-          // marginRight: "30px",
-          // marginLeft: "30px",
           marginBottom: "20px",
           }} 
       ></textarea>
-      {/* <Link
-        to={{
-        pathname: "/AI",
-        data: userId  
-        }}
-      > */}
+
       <button
         type="submit"
         style={{ background: loader ? "#ccc" : " #3F89F3", 
@@ -165,7 +146,6 @@ const Contact = () => {
       >
         ส่ง
       </button>
-      {/* </Link> */}
     </form>
     </center>
   );

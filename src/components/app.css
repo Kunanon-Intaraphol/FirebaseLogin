@@ -34,7 +34,6 @@ button {
 .form > h1 {
   margin-bottom: 5px;
   color: #3F89F3;
-  margin-left: 30px;
   font-size: 20px;
   margin-top: 20px;
 }
@@ -42,7 +41,6 @@ button {
 .form > h2 {
   margin-bottom: 1px;
   color: #3F89F3;
-  margin-left: 30px;
   font-size:16px;
   margin-top: 20px;
 }
@@ -50,7 +48,6 @@ button {
 .form > h6 {
   margin-bottom: 3px;
   color: #909090;
-  margin-left: 30px;
   font-size:15px;
   margin-top: 5px;
 }
