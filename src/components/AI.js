@@ -137,7 +137,10 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
               rotation: 1 / 2 + 1 / 8,
               strokeLinecap: "butt",
               textColor:"#3F89F3",
-              trailColor: "#3F89F3"
+              height:"150px",
+              width:"150px",
+              trailColor: "#909090",
+              pathColor:"#3F89F3"
               
             })}
           />
