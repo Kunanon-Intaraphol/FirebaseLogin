@@ -7,7 +7,6 @@ import { CircularProgressbar , buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ChangingProgressProvider from "./ChangingProgressProvider";
 // import liff from '@line/liff';
-  import ChangingProgressProvider from "./ChangingProgressProvider";
 
 
 const Read = () => {
