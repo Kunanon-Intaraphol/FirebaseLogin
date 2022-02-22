@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import AI from "./AI"
 import { Link ,useNavigate } from 'react-router-dom'
 import liff from '@line/liff';
+import AutoScale from 'react-auto-scale';
 // import "react-datepicker/dist/react-datepicker.css";
 
 const Contact = () => {
@@ -93,6 +94,7 @@ const Contact = () => {
   };
 
   return (
+    <AutoScale>
     <form className="form" onSubmit={handleSubmit}>
       <center>
         <img src = {pictureUrl} style={{width:200, height:200 ,
@@ -167,6 +169,7 @@ const Contact = () => {
       </button>
       {/* </Link> */}
     </form>
+    </AutoScale>
   );
 };
 

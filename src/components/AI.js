@@ -2,6 +2,7 @@
 import {db} from "../firebase";
 import React, { useState , useEffect } from 'react';
 import './read.css';
+import AutoScale from 'react-auto-scale';
 // import liff from '@line/liff';
 
 const Read = () => {
@@ -16,7 +17,7 @@ const Read = () => {
 
     const [info , setInfo] = useState([]);
 
-    // const [userId, setUserId] = useState("");
+    // const [userId, setUserId] = useState("");    
     // const [displayName, setDisplayName] = useState("");
     // const [idToken, setIdToken] = useState("");
     // const [pictureUrl, setPictureUrl] = useState("");
@@ -73,6 +74,7 @@ const Read = () => {
       
     // Display the result on the page
     return (
+        <AutoScale>
         <div>
             <center>
             <h3>NewsProof</h3> 
@@ -93,7 +95,7 @@ const Read = () => {
             ))
         }
         </div>
-  
+        </AutoScale>
     );
 }
 
@@ -104,6 +106,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
         console.log("inif")
 
         return(
+            <AutoScale>
         
             <center>
                 <div className="div">
@@ -119,6 +122,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
     
                 </div>
             </center>
+            </AutoScale>
         );
         
     }
@@ -126,6 +130,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
     else{
 
         return(
+            <AutoScale>
         
             <center>
                 <div className="div">
@@ -146,6 +151,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI}) => {
     </button>
                 </div>
             </center>
+            </AutoScale>
         );
     }
     
