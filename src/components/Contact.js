@@ -15,7 +15,7 @@ const Contact = () => {
   const [sentence, setSentence] = useState("");
   const [status, setstatus] = useState("unread");
   const [FAI, setFAI] = useState("");
-  const [FAI, setintFAI] = useState("");
+  const [intFAI, setintFAI] = useState("");
   const [TAI, setTAI] = useState("");
   const [userId, setUserId] = useState("");
   const [displayName, setDisplayName] = useState("");
