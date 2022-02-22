@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import "../components/app.css";
+// import "../components/app.css";    
 import {db} from "../firebase";
 import DatePicker from "react-datepicker";
 import AI from "./AI"
@@ -102,8 +102,8 @@ const Contact = () => {
         <h2>สวัสดีคุณ : {displayName}</h2>
       </center>
     
-      <h1>ตรวจสอบข่าวสาร</h1>
-      <h6>กรุณาระบุข่าวสารที่ต้องการพร้อมรายละเอียดข่าวสารแบบข้อความ</h6>
+      <h1 style ={{marginRight:"auto",marginLeft:"auto"}}>ตรวจสอบข่าวสาร</h1>
+      <h6 style ={{marginRight:"auto",marginLeft:"auto"}}>กรุณาระบุข่าวสารที่ต้องการพร้อมรายละเอียดข่าวสารแบบข้อความ</h6>
 
       
       {/* <label></label>
