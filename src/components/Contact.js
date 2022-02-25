@@ -21,6 +21,8 @@ const Contact = () => {
   const [displayName, setDisplayName] = useState("");
   const [idToken, setIdToken] = useState("");
   const [pictureUrl, setPictureUrl] = useState("");
+  const [STonlyP, setSTonlyP] = useState("");
+  const [onlyST, setTonlyST] = useState("");
 
   const initLine = () => {
     liff.init({ liffId: '1656553430-MzgGexx9' }, () => {
@@ -69,6 +71,8 @@ const Contact = () => {
         displayName:displayName,
         idToken:idToken,
         pictureUrl:pictureUrl,
+        STonlyP:STonlyP,
+        onlyST:onlyST,
 
       })
       .then(() => {
@@ -93,6 +97,8 @@ const Contact = () => {
     setDisplayName("");
     setIdToken("");
     setPictureUrl("");
+    setSTonlyP("");
+    setTonlyST("");
     
   };
 
