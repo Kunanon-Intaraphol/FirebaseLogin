@@ -136,26 +136,6 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
         />
     </div>
 
-    {/* <ChangingProgressProvider style={{ width: "150px", height: "150px" , marginTop:"20px"}}>
-        {value => (
-          <CircularProgressbar
-            value={INTFAI}
-            text={`${INTFAI}%`}
-            circleRatio={0.75}
-            styles={buildStyles({
-              rotation: 1 / 2 + 1 / 8,
-              textColor:"#3F89F3",
-              width: "150px", 
-              height: "150px",
-              trailColor: "#909090",
-              pathColor:"#3F89F3"
-            })}
-          />
-        )}
-    </ChangingProgressProvider> */}
-
-
-
     <h4 style={{marginTop:"30px"}}>มีความเสี่ยงที่จะเป็นข่าวปลอม  {"\n"}</h4> <h4><h8 style={{fontSize:"22px",color:"#e82a4d"}}>{FAI}%{"\n"}</h8></h4>
     <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e"}}>{TAI}%{"\n"}</h9></h4>
 
