@@ -14,9 +14,9 @@ const Read = () => {
     // const { data } = this.props.Uid
 
 
-    setTimeout(function() {
-        window.location.reload(false);
-    }, 7000)
+    // setTimeout(function() {
+    //     window.location.reload(false);
+    // }, 7000)
     
     const [info , setInfo] = useState([]);
 
@@ -141,7 +141,6 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
 
     <p>
     <h4>เนื้อหาข่าว </h4> {News}
-    <h4>รายละเอียดเพิ่มเติม </h4> {Sentence}
     </p>
 
     <div className="AppTable">
