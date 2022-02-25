@@ -93,9 +93,9 @@ const Read = () => {
                     FAI={contacts.FAI}
                     INTFAI={contacts.intFAI}
                     TAI={contacts.TAI}
-                    Status={website.status}
-                    onlyST={website.onlyST}
-                    STonlyP={website.STonlyP}/>
+                    Status={contacts.status}
+                    onlyST={contacts.onlyST}
+                    STonlyP={contacts.STonlyP}/>
                     
                 ))
             }
