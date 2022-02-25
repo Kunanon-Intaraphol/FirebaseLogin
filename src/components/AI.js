@@ -93,7 +93,9 @@ const Read = () => {
                     FAI={contacts.FAI}
                     INTFAI={contacts.intFAI}
                     TAI={contacts.TAI}
-                    Status={contacts.status}/>
+                    Status={website.status}
+                    onlyST={website.onlyST}
+                    STonlyP={website.STonlyP}/>
                     
                 ))
             }
@@ -102,9 +104,15 @@ const Read = () => {
     );
 }
 
-const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
+const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
 
-    console.log(News + " " + Sentence + " " + FAI + " " + TAI + " " + INTFAI);
+    const data = [
+        { name: onlyST[0], gender: STonlyP[0]  },
+        { name:onlyST[1], gender: STonlyP[1] },
+        { name: onlyST[2], gender: STonlyP[2] },
+    ]
+
+    console.log(News + " " + Sentence + " " + FAI + " " + TAI + " " + INTFAI+ " " + onlyST+ " " + STonlyP);
     if(Status == "read"){
         console.log("inif")
 
@@ -154,7 +162,24 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI}) => {
     <p>
     <h4>เนื้อหาข่าว </h4> {News}
     <h4>รายละเอียดเพิ่มเติม </h4> {Sentence}
-    </p>        
+    </p>
+
+    <div className="AppTable">
+                <table>
+                    <tr>
+                        <th>ประโยคที่มีความคล้ายที่จะเป็นข่าวปลอม</th>
+                        <th style={{borderLeft:"4px solid #3F89F3"}}>เปอร์เซ็นต์</th>
+                    </tr>
+                    {data.map((val, key) => {
+                    return (
+                        <tr key={key}>
+                            <td>{val.gender}</td>
+                            <td style={{borderLeft:"4px solid #3F89F3"}}>{val.name}</td>
+                        </tr>
+                    )
+                    })}
+                </table>
+            </div>        
     
                 </div>
             </center>
