@@ -166,6 +166,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
         );
         
     }
+    
 
     else{
 
