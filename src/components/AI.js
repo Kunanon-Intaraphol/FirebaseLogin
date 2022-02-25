@@ -5,7 +5,7 @@ import './read.css';
 // import PercentageCircle from 'reactjs-percentage-circle';
 import { CircularProgressbar , buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import ChangingProgressProvider from "./ChangingProgressProvider";
+import ChangingProgressProvider from "./ChangingProgressProvider"; 
 // import liff from '@line/liff';
 
 
@@ -86,17 +86,17 @@ const Read = () => {
             <h2>{idToken}</h2> */}
             
             </center>
-        {
-            info.map((contacts) => (
-            <Frame News={contacts.news} 
-                   Sentence={contacts.sentence} 
-                   FAI={contacts.FAI}
-                   INTFAI={contacts.intFAI}
-                   TAI={contacts.TAI}
-                   Status={contacts.status}/>
-                   
-            ))
-        }
+            {
+                info.map((contacts) => (
+                <Frame News={contacts.news} 
+                    Sentence={contacts.sentence} 
+                    FAI={contacts.FAI}
+                    INTFAI={contacts.intFAI}
+                    TAI={contacts.TAI}
+                    Status={contacts.status}/>
+                    
+                ))
+            }
         </div>
         
     );

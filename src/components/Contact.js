@@ -3,7 +3,7 @@ import "../components/app.css";
 import {db} from "../firebase";
 import DatePicker from "react-datepicker";
 import AI from "./AI"
-import { Link ,useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import liff from '@line/liff';
 
 // import "react-datepicker/dist/react-datepicker.css";
@@ -61,7 +61,7 @@ const Contact = () => {
         startDate: startDate,
         news: news,
         sentence: sentence,
-        status:status,
+        status:status, 
         FAI:FAI,
         intFAI:intFAI,
         TAI:TAI,
