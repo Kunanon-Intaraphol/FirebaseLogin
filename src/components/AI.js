@@ -106,11 +106,11 @@ const Read = () => {
 
 const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
 
-    const data = [
-        { name: onlyST[0], gender: STonlyP[0]  },
-        { name:onlyST[1], gender: STonlyP[1] },
-        { name: onlyST[2], gender: STonlyP[2] },
-    ]
+    // const data = [
+    //     { name: onlyST[0], gender: STonlyP[0]  },
+    //     { name:onlyST[1], gender: STonlyP[1] },
+    //     { name: onlyST[2], gender: STonlyP[2] },
+    // ]
 
     console.log(News + " " + Sentence + " " + FAI + " " + TAI + " " + INTFAI+ " " + onlyST+ " " + STonlyP);
     if(Status == "read"){
@@ -137,13 +137,13 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
     </div>
 
     <h4 style={{marginTop:"30px"}}>มีความเสี่ยงที่จะเป็นข่าวปลอม  {"\n"}</h4> <h4><h8 style={{fontSize:"22px",color:"#e82a4d"}}>{FAI}%{"\n"}</h8></h4>
-    <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e"}}>{TAI}%{"\n"}</h9></h4>
+    {/* <h4>มีความคล้ายที่จะเป็นข่าวจริง {"\n"}</h4> <h4><h9 style={{fontSize:"22px",color:"#18d93e"}}>{TAI}%{"\n"}</h9></h4> */}
 
     <p>
     <h4>เนื้อหาข่าว </h4> {News}
     </p>
 
-    <div className="AppTable">
+    {/* <div className="AppTable">
                 <table>
                     <tr>
                         <th>ประโยคที่มีความคล้ายที่จะเป็นข่าวปลอม</th>
@@ -158,7 +158,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
                     )
                     })}
                 </table>
-            </div>        
+            </div>         */}
     
                 </div>
             </center>
