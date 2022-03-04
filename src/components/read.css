@@ -55,7 +55,7 @@ h5{
   display: flex;
   justify-content: center;
   margin-top: 30px;
-}
+} 
 
 table, td, th {  
   border: 3px solid #3F89F3;
@@ -63,7 +63,6 @@ table, td, th {
     
 table {
   height: 10px;
-  width: 100px;
   background: #f7f7f7;
   border-collapse: collapse;
 }
