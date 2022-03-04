@@ -42,7 +42,7 @@ const Read = () => {
             fontSize:'20px',
             borderRadius:'10px',
             position:"absolute",
-            top:"35%",
+            top:"50%",
             left:"20%",
             }}
             onClick={() => window.location.reload(false)}
@@ -159,7 +159,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
             fontSize:'20px',
             borderRadius:'10px',
             position:"absolute",
-            top:"35%",
+            top:"50%",
             left:"20%",      
             }}
             onClick={() => window.location.reload(false)}
