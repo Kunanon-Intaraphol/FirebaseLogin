@@ -144,7 +144,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
             borderRadius:'10px',
             position:"absolute",
             top:"40%",
-            left:"20%",      
+            left:"23%",      
             }}
             onClick={() => window.location.reload(false)}
             >
