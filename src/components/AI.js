@@ -152,7 +152,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
     <p style={{fontSize: '20px'}}>โปรดรอสักครู่ ...ระบบกำลังประมวลผล... กรุณากดปุ่มเพื่อรับคำตอบ</p>     
 
     <button style={{    
-            width: "250px",
+            width: "220px",
             height: "60px",
             color: "#ebedf1",
             backgroundColor: '#3F89F3',
