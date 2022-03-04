@@ -43,7 +43,7 @@ const Read = () => {
             borderRadius:'10px',
             position:"absolute",
             top:"35%",
-            left:"40%"
+            left:"30%",
             }}
             onClick={() => window.location.reload(false)}
             >
@@ -160,7 +160,8 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
             borderRadius:'10px',
             position:"absolute",
             top:"35%",
-            left:"40%"            }}
+            left:"30%",      
+            }}
             onClick={() => window.location.reload(false)}
             >
             กดเพื่อรับผลคำตอบ
