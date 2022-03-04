@@ -33,22 +33,6 @@ const Read = () => {
         <div>
             <center>
             <h3>NewsProof</h3> 
-
-            <button style={{    
-            width: "220px",
-            height: "60px",
-            color: "#ebedf1",
-            backgroundColor: '#3F89F3',
-            fontSize:'20px',
-            borderRadius:'10px',
-            position:"absolute",
-            top:"50%",
-            left:"20%",
-            }}
-            onClick={() => window.location.reload(false)}
-            >
-            กดเพื่อรับผลคำตอบ
-            </button>
             </center>
             {
                 info.map((contacts) => (
@@ -159,7 +143,7 @@ const Frame = ({News , Sentence , FAI ,Status ,TAI ,INTFAI,onlyST,STonlyP}) => {
             fontSize:'20px',
             borderRadius:'10px',
             position:"absolute",
-            top:"50%",
+            top:"35%",
             left:"20%",      
             }}
             onClick={() => window.location.reload(false)}
