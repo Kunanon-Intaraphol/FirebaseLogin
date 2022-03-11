@@ -55,9 +55,8 @@ const Contact = () => {
     e.preventDefault();
     setLoader(true);
 
-    const Uid = userId
 
-    db.collection("contacts").doc(Uid)
+    db.collection("contacts").doc('Uid')
       .set({
         // name: name,
         startDate: startDate,
